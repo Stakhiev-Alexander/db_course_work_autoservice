@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8007891A-69C3-4656-9AAC-20F5D86D7DE1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>db_course_work_autoservice</RootNamespace>
+    <AssemblyName>db_course_work_autoservice</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClientTools\AddWorkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientTools\AddWorkForm.Designer.cs">
+      <DependentUpon>AddWorkForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientTools\MyCars.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientTools\MyCars.Designer.cs">
+      <DependentUpon>MyCars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientTools\ServicesForClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientTools\ServicesForClient.Designer.cs">
+      <DependentUpon>ServicesForClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientTools\WorksClientsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientTools\WorksClientsForm.Designer.cs">
+      <DependentUpon>WorksClientsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB_Connection\Shops.cs" />
+    <Compile Include="DB_Connection\Storage.cs" />
+    <Compile Include="DB_Connection\User.cs" />
+    <Compile Include="DB_Connection\Works.cs" />
+    <Compile Include="DirectorsTools\MasterView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DirectorsTools\MasterView.Designer.cs">
+      <DependentUpon>MasterView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DirectorsTools\ServicesView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DirectorsTools\ServicesView.Designer.cs">
+      <DependentUpon>ServicesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DirectorsTools\ShopsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DirectorsTools\ShopsView.Designer.cs">
+      <DependentUpon>ShopsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DirectorsTools\StorageView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DirectorsTools\StorageView.Designer.cs">
+      <DependentUpon>StorageView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenus\ClientMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenus\ClientMainMenu.Designer.cs">
+      <DependentUpon>ClientMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenus\DirectorMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenus\DirectorMainMenu.Designer.cs">
+      <DependentUpon>DirectorMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenus\MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenus\MasterMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenus\MasterMainMenu.Designer.cs">
+      <DependentUpon>MasterMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MastersTools\FreeWorks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MastersTools\FreeWorks.Designer.cs">
+      <DependentUpon>FreeWorks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MastersTools\WorksMastersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MastersTools\WorksMastersForm.Designer.cs">
+      <DependentUpon>WorksMastersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersanalDataViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersanalDataViewer.Designer.cs">
+      <DependentUpon>PersanalDataViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrationForm.Designer.cs">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignInForm.Designer.cs">
+      <DependentUpon>SignInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ClientTools\AddWorkForm.resx">
+      <DependentUpon>AddWorkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientTools\MyCars.resx">
+      <DependentUpon>MyCars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientTools\ServicesForClient.resx">
+      <DependentUpon>ServicesForClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientTools\WorksClientsForm.resx">
+      <DependentUpon>WorksClientsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DirectorsTools\MasterView.resx">
+      <DependentUpon>MasterView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DirectorsTools\ServicesView.resx">
+      <DependentUpon>ServicesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DirectorsTools\ShopsView.resx">
+      <DependentUpon>ShopsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DirectorsTools\StorageView.resx">
+      <DependentUpon>StorageView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenus\ClientMainMenu.resx">
+      <DependentUpon>ClientMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenus\DirectorMainMenu.resx">
+      <DependentUpon>DirectorMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenus\MasterMainMenu.resx">
+      <DependentUpon>MasterMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MastersTools\FreeWorks.resx">
+      <DependentUpon>FreeWorks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MastersTools\WorksMastersForm.resx">
+      <DependentUpon>WorksMastersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersanalDataViewer.resx">
+      <DependentUpon>PersanalDataViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RegistrationForm.resx">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="signInForm.resx">
+      <DependentUpon>SignInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
